@@ -2,6 +2,7 @@ import { useState } from "react";
 import Swal from "sweetalert2";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import timerImage from "../assets/timer.png";
+import budgetImage from "../assets/budget-image.png"
 
 function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -22,12 +23,8 @@ function Header() {
   return (
     <header className="md:flex justify-between items-center mb-8 p-4 bg-white shadow-md">
       <div className="flex justify-between items-center space-x-4">
-        <h1 className="text-2xl font-semibold text-blue-700">Budget</h1>
-        <input
-          type="search"
-          placeholder="Search"
-          className="hidden md:block border border-gray-300 p-2 rounded-md focus:outline-none focus:ring focus:ring-blue-200"
-        />
+      <img src={budgetImage} className="w-12"/>
+        <h1 className="text-2xl font-semibold">Budget</h1>
         <div className="md:hidden">
           <button onClick={toggleMenu} className="focus:outline-none">
             {isMenuOpen ? (

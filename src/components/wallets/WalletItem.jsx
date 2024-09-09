@@ -24,7 +24,10 @@ function WalletItem({ wallet, refetchWallets }) {
         onClick={toggleModal}
         className="flex justify-between items-center bg-white p-4 rounded-lg shadow hover:bg-gray-300 hover:cursor-pointer"
       >
-        <p>{wallet.name}</p>
+        <div className="flex items-center">
+          <img src={`https://ui-avatars.com/api/?name=${wallet.name}&background=random`} alt="icon" className="me-2 w-9 rounded-xl drop-shadow-lg border-2 border-gray-300"/>
+          <p>{wallet.name}</p>
+        </div>
         <button
           onClick={(e) => {
             e.stopPropagation();

@@ -26,8 +26,15 @@ function CategoryItem({ category, refetchCategories }) {
         className="bg-white p-4 rounded-lg shadow flex items-center justify-between hover:bg-gray-300 hover:cursor-pointer"
       >
         <div>
-          <p className="font-semibold">{category.name}</p>
-          <p className="text-gray-400">{formattedDate(category.createdAt)}</p>
+          <div className="flex items-center">
+            <div className="me-2">
+              <img src={`https://ui-avatars.com/api/?name=${category.name}&background=random`} alt="icon" className="me-2 w-9 rounded-xl drop-shadow-lg border-2 border-gray-300"/>
+            </div>
+            <div>
+              <p className="font-semibold">{category.name}</p>
+              <p className="text-gray-400">{formattedDate(category.createdAt)}</p>
+            </div>
+          </div>
         </div>
         <button
           onClick={(e) => {

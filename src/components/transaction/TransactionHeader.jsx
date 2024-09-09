@@ -31,8 +31,8 @@ function TransactionHeader({ transaction, refetchTransaction }) {
   return (
     <div>
       <div className="sm:flex justify-between items-center text-center mb-6">
-        <h2 className="text-2xl font-bold mb-2 md:mb-0">Home Wallet</h2>
-        <button onClick={toggleModal} className="text-gray-700 bg-blue-300 px-4 py-2 rounded-lg">
+        <h2 className="text-2xl font-bold mb-2 md:mb-0">Transaction List</h2>
+        <button onClick={toggleModal} className="text-gray-700 bg-sky-300 px-4 py-2 rounded-lg font-medium hover:bg-sky-500">
           Add Transaction
         </button>
         <AddTransactionForm isOpenModal={isOpenModal} toggleModal={toggleModal} refetchTransaction={refetchTransaction}/>

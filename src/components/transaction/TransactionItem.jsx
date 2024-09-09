@@ -39,7 +39,7 @@ function TransactionItem({ transaction, refetchTransaction }) {
     <>
       <li
         onClick={toggleModal}
-        className="flex justify-between items-center bg-gray-50 p-4 rounded-lg hover:bg-gray-300 hover:cursor-pointer"
+        className="flex justify-between items-center bg-gray-100 p-4 rounded-lg hover:bg-gray-300 hover:cursor-pointer"
       >
         <div>
           <h3 className="text-blue-600">{transaction.title}</h3>
