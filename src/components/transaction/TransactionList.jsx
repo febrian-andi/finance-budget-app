@@ -15,8 +15,8 @@ function TransactionList() {
   const sortedTransactions = (transactions) => {
     if (!transactions) return [];
     return transactions.sort((a, b) => {
-      const dateA = new Date(a.date);
-      const dateB = new Date(b.date);
+      const dateA = new Date(a.createdAt);
+      const dateB = new Date(b.createdAt);
 
       if (isSortedAsc) {
         return dateA - dateB;
